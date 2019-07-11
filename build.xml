@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MAXIM_RPC" default="build" basedir=".">
+    <property name="src" value="src"/>
+    <property name="dest" value="build/classes" />
+    <property name="jar" value="dist/MAXIM_RPC.jar" />
+    <target name="init">
+        <mkdir dir="${dest}" />
+    </target>
+       <target name="complie" depends="init">
+        <javac srcdir="${src}" destdir="${dest}">
+        	<compilerarg line="-encoding UTF-8 "/> 
+        </javac>
+    </target>
+    <target name="build" depends="complie">
+        <jar destfile="${jar}" basedir="${dest}" >
+        </jar>
+    </target>
+</project>
